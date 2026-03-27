@@ -1,0 +1,48 @@
+# Self-Analyst Configuration: Trader
+# Copy this to your project and customize
+
+role: trader
+
+evolution_model: trader
+# Options: trader, developer, pm, designer, custom
+
+scoring:
+  iq_dimensions:
+    - quantitative_analysis
+    - system_architecture
+    - pattern_recognition
+    - cross_domain_integration
+
+  eq_dimensions:
+    - self_awareness          # 1x
+    - loss_acceptance          # 2x (primary bottleneck)
+    - impulse_control          # 1x
+    - conviction_management    # 2x (primary bottleneck)
+    - discipline_compliance    # 1x
+    - emotional_recovery       # 1x
+    - adaptability             # 1x
+
+  eq_2x_weights:
+    - loss_acceptance
+    - conviction_management
+
+  ai_dimensions:
+    - agent_coverage
+    - command_utilization
+    - memory_system
+    - self_evolution
+    - production_deploy
+    - mcp_integration
+    - system_authority
+
+composite_weights:
+  iq: 0.20
+  eq: 0.40
+  ai: 0.15
+  risk: 0.25
+
+review_cadence:
+  weekly: quick
+  biweekly: full
+  after_major_loss: eq-only
+  after_system_upgrade: iq-only

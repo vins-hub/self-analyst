@@ -1,0 +1,47 @@
+# Self-Analyst Configuration: Software Engineer
+
+role: developer
+
+evolution_model: developer
+# Cowboy -> Craftsman -> Architect -> Force Multiplier -> Technical Leader
+
+scoring:
+  iq_dimensions:
+    - architecture_quality
+    - code_craftsmanship
+    - problem_decomposition
+    - technical_breadth
+    - debugging_root_cause
+
+  eq_dimensions:
+    - self_awareness           # 1x
+    - ego_attachment           # 2x (primary bottleneck)
+    - feedback_reception       # 2x (primary bottleneck)
+    - collaboration            # 1x
+    - estimation_honesty       # 1x
+    - adaptability             # 1x
+
+  eq_2x_weights:
+    - ego_attachment
+    - feedback_reception
+
+  ai_dimensions:
+    - agent_coverage
+    - command_utilization
+    - memory_system
+    - self_evolution
+    - production_deploy
+    - mcp_integration
+    - system_authority
+
+composite_weights:
+  iq: 0.25
+  eq: 0.35
+  ai: 0.20
+  risk: 0.20
+
+review_cadence:
+  weekly: quick
+  biweekly: full
+  after_incident: eq-only
+  after_architecture_change: iq-only
